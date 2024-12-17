@@ -27,7 +27,7 @@
     window.onload = function () {
       import('./controllers/indexController.js').then(module => {
         // Now use the Controller class after it has been loaded
-        module.Controller.init();  // Call the static init() method on Controller
+        module.indexController.init();  // Call the static init() method on Controller
       }).catch(error => {
         console.error('Error loading the Controller module:', error);
       });
