@@ -5,32 +5,7 @@ import { Container } from "../utils/Container.js";
 export class indexController {
   // I had to add this static init() and change the indexController to a class to get the page to load automatically. I'm not exactly sure why it couldn't be a function instead of a class.
   static init() {
-
     const container = new Container("container");
-    const navRow = new Row("row mt-2");
-    navRow.addColumn(new Column("", "col-3"));
-    navRow.addColumn(
-      new Column(`
-        <div class="row align-items-end d-flex">
-          <div class="col-2 d-flex justify-content-end align-items-end">
-            <a href="index.html" style="font-size: 13px; color:#00ffff42" class="link-underline-opacity-0 link-underline">Home</a>
-          </div>
-          <div class="col-4 d-flex justify-content-center align-items-end">
-            <a href="blackForestApi.html" style="font-size: 13px;" class="link-underline-opacity-0 link-underline text-info">Black Forest FLUX</a>
-          </div>
-          <div class="col-4 d-flex justify-content-center align-items-end">
-            <a href="openAiApi.html" style="font-size: 13px;" class="link-underline-opacity-0 link-underline text-info">OpenAI Dall-E-3</a>
-          </div>
-          <div class="col-2 d-flex justify-content-start align-items-end">
-            <a href="about.html" style="font-size: 13px;" class="link-underline-opacity-0 link-underline text-info">About</a>
-          </div>
-        </div>
-      `, "col-6")
-    );
-    navRow.addColumn(new Column("", "col-3"));
-
-    container.addRow(navRow);
-
     const logoRow = new Row("row mt-4");
     logoRow.addColumn(new Column("", "col-8"));
     logoRow.addColumn(
