@@ -9,7 +9,6 @@ export async function bfIngredientsList() {
     max_tokens: 500,
     stream: false
   };
-  console.log(payload);
   let result = await fetch(url, {
     method: "POST",
     body: JSON.stringify(payload),
@@ -19,7 +18,6 @@ export async function bfIngredientsList() {
     }
   });
   let data = await result.json();
-  console.log(data);
   let ingredients = data.choices[0].message.content;
   return ingredients;
 }

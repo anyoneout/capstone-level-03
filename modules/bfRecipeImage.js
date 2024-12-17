@@ -13,11 +13,8 @@ export async function bfRecipeImage() {
       "Content-Type": "application/json"
     }
   });
-  console.log(result);
   let blob = await result.blob();
-  console.log(blob);
   let imgUrl = URL.createObjectURL(blob);
-  console.log(imgUrl);
   recipeImgHTML.src = imgUrl;
   recipeNameHTML.innerHTML = userRecipe;
   recipeImgHTML.classList.add("borderImage");
