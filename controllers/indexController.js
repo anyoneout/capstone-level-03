@@ -73,7 +73,7 @@ export class indexController {
           </div>
           <div class="col-4">
             <a href="blackForestApi.html" class="btn btn-sm btn-outline-info fw-bold">BF Flux</a>
-            <a href="openAIApi.html" class="btn btn-sm btn-outline-info fw-bold">Dall-E-3</a>
+            <a href="openAiApi.html" class="btn btn-sm btn-outline-info fw-bold">Dall-E-3</a>
           </div>
         </div>`, "col-8"));
 
