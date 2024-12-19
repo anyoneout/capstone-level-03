@@ -14,9 +14,10 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+<!-- I was able to fix the unknown code issues by attaching the indexController function to the window object in indexController.js -->
 
-
-<body style="background-color: rgb(0, 0, 0);">
+<body style="background-color: rgb(0, 0, 0);"
+  onload="indexController.init()">
 
   <div class="row mt-1">
     <div class="row w-100">
@@ -53,21 +54,9 @@
       <div class="col-4"></div>
     </div>
   </div>
-  <!-- I tried loading the indexController.js file by changing it to a an exported function and typing "onload=indexController()" in the <body> but I kept getting an initialization error and this was the only solution I could find that worked. -->
 
   <script src="./controllers/indexController.js"
-    type="module"></script>
-  <script type="module">
-    // Wait for the DOM to fully load, then initialize the controller
-    window.onload = function () {
-      import('./controllers/indexController.js').then(module => {
-        // Now use the Controller class after it has been loaded
-        module.indexController.init();  // Call the static init() method on Controller
-      }).catch(error => {
-        console.error('Error loading the Controller module:', error);
-      });
-    };
-  </script>
+    type="module" defer></script>
 </body>
 
 </html>

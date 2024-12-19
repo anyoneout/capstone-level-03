@@ -2,6 +2,8 @@ import { Row } from "../utils/Row.js";
 import { Column } from "../utils/Column.js";
 import { Container } from "../utils/Container.js";
 
+
+
 export class indexController {
   // I had to add this static init() and change the indexController to a class to get the page to load automatically. I'm not exactly sure why it couldn't be a function instead of a class.
   static init() {
@@ -101,4 +103,6 @@ export class indexController {
 
     document.body.innerHTML += container;
   }
-} 
+}
+
+window.indexController = indexController;
