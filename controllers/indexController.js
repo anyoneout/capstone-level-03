@@ -4,14 +4,12 @@ import { Container } from "../utils/Container.js";
 
 
 
-export class indexController {
-  // I had to add this static init() and change the indexController to a class to get the page to load automatically. I'm not exactly sure why it couldn't be a function instead of a class.
-  static init() {
-    const container = new Container("container");
-    const logoRow = new Row("row mt-4");
-    logoRow.addColumn(new Column("", "col-8"));
-    logoRow.addColumn(
-      new Column(`
+export function indexController() {
+  const container = new Container("container");
+  const logoRow = new Row("row mt-4");
+  logoRow.addColumn(new Column("", "col-8"));
+  logoRow.addColumn(
+    new Column(`
         <div class="row">
           <div class="col-3">
             <div class="card" style="width: 100%; background-color: black;">
@@ -22,21 +20,21 @@ export class indexController {
             <div style="color: white; font-size: 125%;">BLACK FOREST</div>
           </div>
         </div>`, "col-2 d-flex align-items-start"
-      )
-    );
-    logoRow.addColumn(
-      new Column(`
+    )
+  );
+  logoRow.addColumn(
+    new Column(`
         <div class="card" style="width: 100%; background-color: black;">
           <img src="img/dallE3Logo.jpg" alt="..." style="width: 58%">
         </div>`, "col-2 d-flex align-items-end"
-      )
-    );
-    container.addRow(logoRow);
+    )
+  );
+  container.addRow(logoRow);
 
 
-    const descriptionRow = new Row("row");
+  const descriptionRow = new Row("row");
 
-    descriptionRow.addColumn(new Column(`
+  descriptionRow.addColumn(new Column(`
         <div class="row mt-5"></div>
         <div class="row mt-5">
           <p class="display-4 fw-bold" style="color: #fff78a">Recipe Deconstructor</p>
@@ -54,7 +52,7 @@ export class indexController {
           </div>
         </div>`, "col-8"));
 
-    descriptionRow.addColumn(new Column(`
+  descriptionRow.addColumn(new Column(`
         <div class="card"
           style="width: 100%; background-color: black; ">
           <img src="img/bfbsrecipe.jpg" class="card-img"
@@ -77,7 +75,7 @@ export class indexController {
             alt="...">
         </div>
         `, "col-2"));
-    descriptionRow.addColumn(new Column(`<div class="card"
+  descriptionRow.addColumn(new Column(`<div class="card"
       style="width: 100%; background-color: black;">
       <img src="img/openaibsrecipe.jpg" class="card-img"
         alt="...">
@@ -99,10 +97,10 @@ export class indexController {
         </div>
         `, "col-2"));
 
-    container.addRow(descriptionRow);
+  container.addRow(descriptionRow);
 
-    document.body.innerHTML += container;
-  }
+  document.body.innerHTML += container;
+
 }
 
 window.indexController = indexController;
