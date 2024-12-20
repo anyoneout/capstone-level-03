@@ -3,7 +3,7 @@ import { Column } from "../utils/Column.js";
 import { Container } from "../utils/Container.js";
 
 
-
+// did some reading and realized that it could be a function instead of a class and just loaded it normally.
 export function indexController() {
   const container = new Container("container");
   const logoRow = new Row("row mt-4");
